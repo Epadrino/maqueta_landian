@@ -5,6 +5,7 @@ const DarkTheme: DefaultTheme = {
 		primary: '#FFFFFF',
 		secondary: '#80D1FF',
 		tertiary: '#0D0D0D',
+		header: '#0D0D0D',
 	},
 	backgrounds: {
 		primary: '#000000',
