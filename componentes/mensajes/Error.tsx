@@ -22,7 +22,10 @@ export const Error = () => {
 					/>
 					<MensajeUno>¡Oh wow!</MensajeUno>
 					<MensajeDos>Parece que hubo un error</MensajeDos>
-					<BotonAccion text="Reintentar" />
+					<BotonAccion
+						text="Reintentar"
+						href=""
+					/>
 				</Caja>
 			</ContenedorMensaje>
 		</Contenedor>
