@@ -1,0 +1,38 @@
+{
+	"name": "primer_proyecto_mockup",
+	"version": "0.1.0",
+	"private": true,
+	"scripts": {
+		"dev": "next dev",
+		"build": "next build",
+		"start": "next start",
+		"lint": "next lint"
+	},
+	"dependencies": {
+		"@next/font": "^13.0.6",
+		"@types/node": "18.11.15",
+		"@types/react": "18.0.26",
+		"@types/react-dom": "18.0.9",
+		"@walletconnect/web3-provider": "^1.8.0",
+		"ethers": "^5.7.2",
+		"next": "13.0.6",
+		"react": "18.2.0",
+		"react-dom": "18.2.0",
+		"react-toastify": "^9.1.1",
+		"styled-components": "^5.3.6",
+		"typescript": "4.9.4",
+		"web3": "^1.8.1",
+		"eslint": "8.29.0",
+		"eslint-config-next": "13.0.6",
+		"lottie-web": "^5.10.0",
+		"react-icons": "^4.7.1",
+		"react-qr-code": "^2.0.11"
+	},
+	"devDependencies": {
+		"@types/styled-components": "^5.1.26",
+		"@types/styled-components-react-native": "^5.2.0"
+	},
+	"resolutions": {
+		"styled-components": "^5"
+	}
+}
