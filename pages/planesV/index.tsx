@@ -1,8 +1,8 @@
-import { useEffect } from 'react';
-import { BotonAccion } from '../componentes/botones';
-import { LayoutDentro } from '../componentes/layaouts';
-import { Detalles, Productos } from '../componentes/productos';
-import { useEstado } from '../hooks';
+import { useEffect, useState } from 'react';
+import { BotonAccion } from '../../componentes/botones';
+import { LayoutDentro } from '../../componentes/layaouts';
+import { Detalles, Productos } from '../../componentes/productos';
+import { useEstado } from '../../hooks';
 import {
 	Contenedor,
 	ContenedorDeBotones,
@@ -12,9 +12,15 @@ import {
 	Titulo,
 	ContenedorDeProductos,
 	Caja,
-} from '../styles/planesV/StyledPlanesV';
+} from './planesVStyled';
 
 export default function PlanesV() {
+	const [detalle, setDetalle] = useState(false);
+
+	const onDetalle = () => {
+		setDetalle((prevValue) => !prevValue);
+	};
+
 	return (
 		<LayoutDentro title="PlanesV">
 			<Contenedor>
@@ -33,19 +39,25 @@ export default function PlanesV() {
 						<Productos />
 					</ContenedorDeProductos>
 					<ContenedorDeBotones>
-						<BotonAccion text="Ir a mi Pagar" />
+						<BotonAccion
+							text="Ir a Pagar"
+							href="/pagar"
+						/>
 
 						<BotonAccion
-							onClick={() => {}}
+							onClick={onDetalle}
 							text="Ver detalles"
+							href=""
 						/>
 					</ContenedorDeBotones>
 				</Caja>
 			</Contenedor>
-			<Detalles
-				onClick={() => {}}
-				price={100}
-			/>
+			{detalle ? (
+				<Detalles
+					onClick={onDetalle}
+					price={100}
+				/>
+			) : null}
 		</LayoutDentro>
 	);
 }

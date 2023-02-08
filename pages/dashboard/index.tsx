@@ -1,6 +1,7 @@
-import { BotonAccion } from '../componentes/botones';
-import { LayoutDentro } from '../componentes/layaouts';
-import { TablaInformativa } from '../componentes/tabla/informativa/TablaInformativa';
+import Link from 'next/link';
+import { BotonAccion } from '../../componentes/botones';
+import { LayoutDentro } from '../../componentes/layaouts';
+import { TablaInformativa } from '../../componentes/tabla/informativa/TablaInformativa';
 
 import {
 	Contenedor,
@@ -31,11 +32,11 @@ import {
 	ContenedorListaTlf,
 	ContenedorListaEscritorio,
 	ContenedorFondo,
-} from '../styles/dashboard/StyledDashboard';
+} from './dashboardStyled';
 
 export default function dashboard() {
 	return (
-		<LayoutDentro title='Dashboard'>
+		<LayoutDentro title="Dashboard">
 			<Contenedor>
 				<ContenedorReferidos>
 					<ContenedorCodigo>
@@ -48,9 +49,8 @@ export default function dashboard() {
 					<ContenedorReferidosTexto>
 						<TextoTitulo>¡Hola!</TextoTitulo>
 						<TextoParrafo>
-							Aquí tienes, tu código para referir personas. Puedes
-							copiar la información o descargar y envíar tu código
-							QR.
+							Aquí tienes, tu código para referir personas. Puedes copiar la
+							información o descargar y envíar tu código QR.
 						</TextoParrafo>
 						<ContenedorInput>
 							<TextoInput></TextoInput>
@@ -103,27 +103,40 @@ export default function dashboard() {
 				</ContenedorDatos>
 
 				<ContenedorBotonesListas>
-					<BotonAccion text='Mis movimientos' />
-					<BotonAccion text='Mis referidos' />
+					<BotonAccion
+						text="Mis movimientos"
+						href=""
+					/>
+					<BotonAccion
+						text="Mis referidos"
+						href=""
+					/>
 				</ContenedorBotonesListas>
 				<ContenedorListas>
 					<ContenedorListaTlf>
 						<TituloLista>Mis movimientos</TituloLista>
 						<TablaInformativa />
 						<ContenedorListaBoton>
-							<BotonLista>Ver todos los movimientos</BotonLista>
+							<Link href="/movimientos">
+								<BotonLista>Ver todos los movimientos</BotonLista>
+							</Link>
 						</ContenedorListaBoton>
 					</ContenedorListaTlf>
 					<ContenedorListaEscritorio>
-						<TituloLista>Mis movimientos</TituloLista>
+						<TituloLista>Mis Referidos</TituloLista>
 						<TablaInformativa />
 						<ContenedorListaBoton>
-							<BotonLista>Ver todos los movimientos</BotonLista>
+							<Link href="/referidos">
+								<BotonLista>Ver todos los movimientos</BotonLista>
+							</Link>
 						</ContenedorListaBoton>
 					</ContenedorListaEscritorio>
 				</ContenedorListas>
 				<ContenedorBotonesListas>
-					<BotonAccion text='Ver todos los movimientos' />
+					<BotonAccion
+						text="Ver todos los movimientos"
+						href=""
+					/>
 				</ContenedorBotonesListas>
 			</Contenedor>
 		</LayoutDentro>

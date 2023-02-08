@@ -26,8 +26,6 @@ export const Cuerpo = styled.div`
 
 export const CuerpoUsuario = styled.div`
 	display: flex;
-	justify-content: center;
-	align-items: center;
 	width: 100%;
 
 	@media ${device.mobileXS} {

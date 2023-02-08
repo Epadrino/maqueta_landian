@@ -11,7 +11,7 @@ import {
 	ContenedorCuerpo,
 	ContenedorDeBotones,
 	ContenedorImangen,
-} from '../styles/referido/StyledReferido';
+} from './indexStyled';
 
 export default function Referido() {
 	return (
@@ -48,8 +48,14 @@ export default function Referido() {
 						</ContenedorIcon>
 					</Contenedor>
 					<ContenedorDeBotones>
-						<BotonAccion text="Continuar" />
-						<BotonAccion text="Ya tengo cuenta" />
+						<BotonAccion
+							text="Continuar"
+							href="wallet"
+						/>
+						<BotonAccion
+							text="Ya tengo cuenta"
+							href="usuario"
+						/>
 					</ContenedorDeBotones>
 				</ContenedorDos>
 			</ContenedorCuerpo>

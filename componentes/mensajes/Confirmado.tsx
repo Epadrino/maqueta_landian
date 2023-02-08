@@ -22,7 +22,10 @@ export const Confirmado = () => {
 					/>
 					<MensajeUno>¡Ahora si!</MensajeUno>
 					<MensajeDos>Disfruta de tu nueva experiencia</MensajeDos>
-					<BotonAccion text="Ver Resumen" />
+					<BotonAccion
+						text="Ver Resumen"
+						href=""
+					/>
 				</Caja>
 			</ContenedorMensaje>
 		</Contenedor>

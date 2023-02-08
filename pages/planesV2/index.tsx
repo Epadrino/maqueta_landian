@@ -1,7 +1,10 @@
 import Image from 'next/image';
 
-import { BotonAccion, BotonImagen } from '../componentes/botones';
-import { LayoutDentro } from '../componentes/layaouts';
+import { useState } from 'react';
+
+import { BotonAccion, BotonImagen } from '../../componentes/botones';
+import { LayoutDentro } from '../../componentes/layaouts';
+import { Detalles } from '../../componentes/productos';
 import {
 	Contenedor,
 	ContenedorDeBotones,
@@ -15,11 +18,16 @@ import {
 	Titulo,
 	Icon,
 	Caja,
-} from '../styles/planesV2/StyledPlanesV2';
+} from './planesV2Styled';
 
 export default function PlanesV2() {
+	const [detalle, setDetalle] = useState(false);
+
+	const onDetalle = () => {
+		setDetalle((prevValue) => !prevValue);
+	};
 	return (
-		<LayoutDentro title='PlanesV2'>
+		<LayoutDentro title="PlanesV2">
 			<Contenedor>
 				<Caja>
 					<ContenedorIzq>
@@ -31,37 +39,31 @@ export default function PlanesV2() {
 								<BotonImagen>
 									<Icon>
 										<Image
-											src='/images/iconos/icon_izq.png'
-											alt='Img'
+											src="/images/iconos/icon_izq.png"
+											alt="Img"
 											fill
 										/>
 									</Icon>
 								</BotonImagen>
 							</ContenedorDeFlecha>
 							<Productos>
-								<TextoDeTarjetas>
-									NOMBRE TARJETA
-								</TextoDeTarjetas>
+								<TextoDeTarjetas>NOMBRE TARJETA</TextoDeTarjetas>
 								<TextoDeTarjetas>200 USD</TextoDeTarjetas>
 							</Productos>
 							<Productos>
-								<TextoDeTarjetas>
-									NOMBRE TARJETA
-								</TextoDeTarjetas>
+								<TextoDeTarjetas>NOMBRE TARJETA</TextoDeTarjetas>
 								<TextoDeTarjetas>200 USD</TextoDeTarjetas>
 							</Productos>
 							<Productos>
-								<TextoDeTarjetas>
-									NOMBRE TARJETA
-								</TextoDeTarjetas>
+								<TextoDeTarjetas>NOMBRE TARJETA</TextoDeTarjetas>
 								<TextoDeTarjetas>200 USD</TextoDeTarjetas>
 							</Productos>
 							<ContenedorDeFlecha>
 								<BotonImagen>
 									<Icon>
 										<Image
-											src='/images/iconos/icon_der.png'
-											alt='Img'
+											src="/images/iconos/icon_der.png"
+											alt="Img"
 											fill
 										/>
 									</Icon>
@@ -74,11 +76,24 @@ export default function PlanesV2() {
 						<Titulo>200 USD</Titulo>
 					</ContenedorDeTextos>
 					<ContenedorDeBotones>
-						<BotonAccion text='Ir a Pagar' />
-						<BotonAccion text='Ver detalles' />
+						<BotonAccion
+							text="Ir a Pagar"
+							href="/pagar"
+						/>
+						<BotonAccion
+							text="Ver detalles"
+							href=""
+							onClick={onDetalle}
+						/>
 					</ContenedorDeBotones>
 				</Caja>
 			</Contenedor>
+			{detalle ? (
+				<Detalles
+					onClick={onDetalle}
+					price={100}
+				/>
+			) : null}
 		</LayoutDentro>
 	);
 }

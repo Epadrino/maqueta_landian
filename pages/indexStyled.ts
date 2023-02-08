@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { device } from '../../utils/devices';
+import { device } from '../utils/devices';
 
 export const ContenedorCuerpo = styled.div`
 	display: flex;
@@ -69,18 +69,18 @@ export const ContenedorDeBotones = styled.div`
 `;
 
 export const Contenedor = styled.div`
+	position: relative;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
 	justify-content: space-evenly;
-	position: relative;
 `;
 
 export const ContenedorIcon = styled.div`
 	@media ${device.mobileXS} {
 		position: absolute;
-		left: 85.5%;
-		top: 27%;
+		left: 90%;
+		top: 25%;
 		z-index: 1;
 		div {
 			width: 21px;
@@ -89,8 +89,8 @@ export const ContenedorIcon = styled.div`
 	}
 	@media ${device.tablet} {
 		position: absolute;
-		left: 88%;
-		top: 15%;
+		left: 90%;
+		top: 25%;
 		z-index: 1;
 		div {
 			width: 32px;

@@ -41,7 +41,10 @@ export const Detalles: FC<Props> = ({ price, onClick }) => {
 					<h1>{price.toLocaleString()} USD</h1>
 				</Precio>
 				<CajaBotonAccion>
-					<BotonAccion text={'¡Lo quiero!'} />
+					<BotonAccion
+						text={'¡Lo quiero!'}
+						href="/pagar"
+					/>
 				</CajaBotonAccion>
 				<TituloDeTarjeta>
 					<h1>NOMBRE DE TARJETA</h1>

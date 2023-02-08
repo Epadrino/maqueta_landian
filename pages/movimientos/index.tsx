@@ -1,8 +1,9 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
-import { BotonImagen } from '../componentes/botones/BotonImagen';
-import { LayoutDentro } from '../componentes/layaouts';
-import { TablaMovimientos } from '../componentes/tabla';
+import { BotonImagen } from '../../componentes/botones/BotonImagen';
+import { LayoutDentro } from '../../componentes/layaouts';
+import { TablaMovimientos } from '../../componentes/tabla';
 import {
 	Contenedor,
 	ContenedorTabla,
@@ -11,21 +12,23 @@ import {
 	Titulo,
 	FondoFlecha,
 	Flecha,
-} from '../styles/referidos/StyledReferidos';
+} from './movimientosStyled';
 
 export default function Movimientos() {
 	return (
-		<LayoutDentro title='Movimientos'>
+		<LayoutDentro title="Movimientos">
 			<Contenedor>
 				<ContenedorRuta>
 					<FondoFlecha>
 						<BotonImagen>
 							<Flecha>
-								<Image
-									src='/images/iconos/flecha_izq.png'
-									alt='Img'
-									fill
-								/>
+								<Link href="/dashboard">
+									<Image
+										src="/images/iconos/flecha_izq.png"
+										alt="Img"
+										fill
+									/>
+								</Link>
 							</Flecha>
 						</BotonImagen>
 					</FondoFlecha>
@@ -39,8 +42,8 @@ export default function Movimientos() {
 						<BotonImagen>
 							<Flecha>
 								<Image
-									src='/images/iconos/flecha_blanca_izq.png'
-									alt='Img'
+									src="/images/iconos/flecha_blanca_izq.png"
+									alt="Img"
 									fill
 								/>
 							</Flecha>
@@ -51,8 +54,8 @@ export default function Movimientos() {
 						<BotonImagen>
 							<Flecha>
 								<Image
-									src='/images/iconos/flecha_blanca_der.png'
-									alt='Img'
+									src="/images/iconos/flecha_blanca_der.png"
+									alt="Img"
 									fill
 								/>
 							</Flecha>

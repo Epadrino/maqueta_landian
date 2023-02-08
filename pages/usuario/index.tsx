@@ -1,14 +1,8 @@
 import Image from 'next/image';
 
-import { useEffect, useState } from 'react';
-
-import { create } from 'domain';
-
-import { BotonAccion } from '../componentes/botones';
-import { Input } from '../componentes/inputs';
-import { LayoutUsuario } from '../componentes/layaouts';
-import { useEstado } from '../hooks';
-import Validator from '../hooks/validator';
+import { BotonAccion } from '../../componentes/botones';
+import { Input } from '../../componentes/inputs';
+import { LayoutUsuario } from '../../componentes/layaouts';
 
 import {
 	Contenedor,
@@ -25,23 +19,22 @@ import {
 	ContenedorDeBoton,
 	ContenedorCuerpo,
 	BotonDeLeerMas,
-} from '../styles/usuario/StyledUsuario';
-import { toast } from 'react-toastify';
-import { UserService } from '../utils/requests/user.service';
-import { Creado } from '../componentes/mensajes';
+} from './usuarioStyled';
+
+import { Creado } from '../../componentes/mensajes';
 
 export default function Usuario() {
 	return (
 		<LayoutUsuario title="Usuario">
 			<ContenedorCuerpo>
 				<ContenedorUno>
-					<div>
+					<section>
 						<Image
-							src="/images/iconos/logo_mockup.png"
+							src="/images/logo/logo_mockup.png"
 							alt="Img"
 							fill
 						/>
-					</div>
+					</section>
 				</ContenedorUno>
 				<ContenedorDos>
 					<TituloUsuario>Crea un usuario</TituloUsuario>
@@ -96,6 +89,7 @@ export default function Usuario() {
 						<BotonAccion
 							text="Continuar"
 							onClick={() => {}}
+							href="/dashboard"
 						/>
 					</ContenedorDeBoton>
 				</ContenedorDos>

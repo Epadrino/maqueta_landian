@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { FC } from 'react';
 import styled from 'styled-components';
 import { device } from '../../utils/devices';
@@ -34,10 +35,15 @@ const BotonDeAccion = styled.button`
 `;
 
 interface Props {
+	href: string;
 	text: string;
 	onClick?: () => void;
 }
 
-export const BotonAccion: FC<Props> = ({ text, onClick }) => {
-	return <BotonDeAccion onClick={onClick}>{text}</BotonDeAccion>;
+export const BotonAccion: FC<Props> = ({ href, text, onClick }) => {
+	return (
+		<Link href={href}>
+			<BotonDeAccion onClick={onClick}>{text}</BotonDeAccion>
+		</Link>
+	);
 };

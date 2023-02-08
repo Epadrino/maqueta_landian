@@ -1,32 +1,35 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
-import { BotonImagen } from '../componentes/botones/BotonImagen';
-import { LayoutDentro } from '../componentes/layaouts';
-import { TablaReferidos } from '../componentes/tabla';
+import { BotonImagen } from '../../componentes/botones/BotonImagen';
+import { LayoutDentro } from '../../componentes/layaouts';
+import { TablaReferidos } from '../../componentes/tabla';
 import {
 	Contenedor,
-	ContenedorTabla,
-	ContenedorRuta,
 	ContenedorListaBoton,
-	Titulo,
-	FondoFlecha,
+	ContenedorRuta,
+	ContenedorTabla,
 	Flecha,
-} from '../styles/referidos/StyledReferidos';
+	FondoFlecha,
+	Titulo,
+} from './referidosStyled';
 
 export default function referidos() {
 	return (
-		<LayoutDentro title='Referidos'>
+		<LayoutDentro title="Referidos">
 			<Contenedor>
 				<ContenedorRuta>
 					<FondoFlecha>
 						<BotonImagen>
-							<Flecha>
-								<Image
-									src='/images/iconos/flecha_izq.png'
-									alt='Img'
-									fill
-								/>
-							</Flecha>
+							<Link href="/dashboard">
+								<Flecha>
+									<Image
+										src="/images/iconos/flecha_izq.png"
+										alt="Img"
+										fill
+									/>
+								</Flecha>
+							</Link>
 						</BotonImagen>
 					</FondoFlecha>
 					<Titulo>Mis Referidos</Titulo>
@@ -39,8 +42,8 @@ export default function referidos() {
 						<BotonImagen>
 							<Flecha>
 								<Image
-									src='/images/iconos/flecha_blanca_izq.png'
-									alt='Img'
+									src="/images/iconos/flecha_blanca_izq.png"
+									alt="Img"
 									fill
 								/>
 							</Flecha>
@@ -51,8 +54,8 @@ export default function referidos() {
 						<BotonImagen>
 							<Flecha>
 								<Image
-									src='/images/iconos/flecha_blanca_der.png'
-									alt='Img'
+									src="/images/iconos/flecha_blanca_der.png"
+									alt="Img"
 									fill
 								/>
 							</Flecha>

@@ -386,6 +386,7 @@ export const BotonLista = styled.button`
 	border-radius: 0 0 10px 10px;
 	color: ${(props) => props.theme.colors.tertiary};
 	background: ${(props) => props.theme.backgrounds.secondary};
+	cursor: pointer;
 `;
 
 export const ContenedorBotonesListas = styled.div`

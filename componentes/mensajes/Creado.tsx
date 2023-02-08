@@ -28,6 +28,7 @@ export const Creado = ({ active }: Props) => {
 					<BotonAccion
 						text="Continuar"
 						onClick={() => '/planesV'}
+						href=""
 					/>
 				</Caja>
 			</ContenedorMensaje>

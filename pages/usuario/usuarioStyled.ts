@@ -2,9 +2,12 @@ import styled from 'styled-components';
 import { device } from '../../utils/devices';
 
 export const ContenedorCuerpo = styled.div`
+	position: relative;
+	align-items: center;
 	display: flex;
 	flex-direction: column;
-	height: 100%;
+	width: 100%;
+
 	@media ${device.mobileXS} {
 		height: 91.36vh;
 	}
@@ -17,18 +20,23 @@ export const ContenedorUno = styled.div`
 	display: flex;
 	align-items: center;
 	justify-content: center;
+
 	@media ${device.mobileXS} {
 		padding-top: 40px;
-		div {
-			width: 159;
-			height: 161;
-		}
 	}
 	@media ${device.tablet} {
 		padding-top: 0px;
-		div {
-			width: 296;
-			height: 299;
+	}
+	section {
+		position: relative;
+
+		@media ${device.mobileXS} {
+			width: 159px;
+			height: 161px;
+		}
+		@media ${device.tablet} {
+			width: 296px;
+			height: 299px;
 		}
 	}
 `;
