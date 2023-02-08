@@ -31,43 +31,14 @@ import { UserService } from '../utils/requests/user.service';
 import { Creado } from '../componentes/mensajes';
 
 export default function Usuario() {
-	const { estado, mostrarOcultar } = useEstado(false);
-	const { inputs, handleChange, onKeyPressed } = Validator();
-	const [err, setErr] = useState<boolean>(false);
-	const [ssuccefull, setSsuccefull] = useState<boolean>(false);
-
-	useEffect(() => {
-		setErr(false);
-	}, [inputs]);
-
-	const create = async () => {
-		await UserService.register(inputs).then((res) => {
-			if (res.status) {
-				localStorage.setItem('user', JSON.stringify(res.data));
-				setSsuccefull(true);
-			}
-			if (res.errors) {
-				if (res.errors[0].field == 'username') {
-					setErr(true);
-				}
-				toast.warning(
-					res.errors[0].message + ' ' + res.errors[0].field,
-					{
-						toastId: 'errorUsername',
-					}
-				);
-			}
-		});
-	};
-
 	return (
-		<LayoutUsuario title='Usuario'>
+		<LayoutUsuario title="Usuario">
 			<ContenedorCuerpo>
 				<ContenedorUno>
 					<div>
 						<Image
-							src='/images/iconos/logo_mockup.png'
-							alt='Img'
+							src="/images/iconos/logo_mockup.png"
+							alt="Img"
 							fill
 						/>
 					</div>
@@ -77,17 +48,17 @@ export default function Usuario() {
 					{/* <Pregunta>¿Tienes dudas?</Pregunta> */}
 					<Contenedor>
 						<Input
-							type='text'
-							name='username'
+							type="text"
+							name="username"
 							placeholder={'Código de referido'}
-							onKeyDown={onKeyPressed}
-							onChange={handleChange}
+							onKeyDown={() => {}}
+							onChange={() => {}}
 						/>
 						<ContenedorIcon>
 							<div>
 								<Image
-									src='/images/iconos/Check.png'
-									alt='Img'
+									src="/images/iconos/Check.png"
+									alt="Img"
 									fill
 								/>
 							</div>
@@ -109,26 +80,27 @@ export default function Usuario() {
 						</MensajeDos>
 					</ContenedorMensajeUno> */}
 					<Input
-						type='email'
-						name='email'
-						placeholder='Ingresa un correo electrónico'
-						onChange={handleChange}
+						type="email"
+						name="email"
+						placeholder="Ingresa un correo electrónico"
+						onKeyDown={() => {}}
+						onChange={() => {}}
 					/>
 					<ContenedorMensajeTres>
 						<MensajeTres>
-							Lo usaremos únicamente para enviarte información
-							relevante del proyecto.
+							Lo usaremos únicamente para enviarte información relevante del
+							proyecto.
 						</MensajeTres>
 					</ContenedorMensajeTres>
 					<ContenedorDeBoton>
 						<BotonAccion
-							text='Continuar'
-							onClick={() => create()}
+							text="Continuar"
+							onClick={() => {}}
 						/>
 					</ContenedorDeBoton>
 				</ContenedorDos>
 			</ContenedorCuerpo>
-			<Creado active={ssuccefull} />
+			<Creado active={false} />
 		</LayoutUsuario>
 	);
 }

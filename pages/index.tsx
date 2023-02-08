@@ -15,14 +15,14 @@ import {
 
 export default function Referido() {
 	return (
-		<LayoutInicio title='Referido'>
+		<LayoutInicio title="Referido">
 			<ContenedorCuerpo>
 				<ContenedorUno>
 					<ContenedorImangen>
 						<div>
 							<Image
-								src='/images/logo/logo_mockup.png'
-								alt='Imagen'
+								src="/images/logo/logo_mockup.png"
+								alt="Imagen"
 								fill
 							/>
 						</div>
@@ -30,20 +30,26 @@ export default function Referido() {
 				</ContenedorUno>
 				<ContenedorDos>
 					<Contenedor>
-						<Input placeholder={'Código de Referido'} />
+						<Input
+							type={''}
+							name={''}
+							placeholder={'Código de Referido'}
+							onKeyDown={() => {}}
+							onChange={() => {}}
+						/>
 						<ContenedorIcon>
 							<div>
 								<Image
-									src='/images/iconos/info_circle.png'
-									alt='Image'
+									src="/images/iconos/info_circle.png"
+									alt="Image"
 									fill
 								/>
 							</div>
 						</ContenedorIcon>
 					</Contenedor>
 					<ContenedorDeBotones>
-						<BotonAccion text='Continuar' />
-						<BotonAccion text='Ya tengo cuenta' />
+						<BotonAccion text="Continuar" />
+						<BotonAccion text="Ya tengo cuenta" />
 					</ContenedorDeBotones>
 				</ContenedorDos>
 			</ContenedorCuerpo>

@@ -11,18 +11,18 @@ import {
 
 export const Confirmado = () => {
 	return (
-		<Contenedor>
+		<Contenedor active={false}>
 			<ContenedorMensaje>
 				<Caja>
 					<Image
-						src='/images/iconos/confetti.png'
-						alt='imagen'
+						src="/images/iconos/confetti.png"
+						alt="imagen"
 						width={175}
 						height={175}
 					/>
 					<MensajeUno>¡Ahora si!</MensajeUno>
 					<MensajeDos>Disfruta de tu nueva experiencia</MensajeDos>
-					<BotonAccion text='Ver Resumen' />
+					<BotonAccion text="Ver Resumen" />
 				</Caja>
 			</ContenedorMensaje>
 		</Contenedor>

@@ -15,11 +15,8 @@ import {
 } from '../styles/planesV/StyledPlanesV';
 
 export default function PlanesV() {
-	const { estado, mostrarOcultar } = useEstado();
-	useEffect(() => {}, [mostrarOcultar]);
-
 	return (
-		<LayoutDentro title='PlanesV'>
+		<LayoutDentro title="PlanesV">
 			<Contenedor>
 				<Caja>
 					<ContenedorIzq>
@@ -27,9 +24,8 @@ export default function PlanesV() {
 							<Titulo>NOMBRE TARJETA</Titulo>
 							<Titulo>200 USD</Titulo>
 							<Parrafo>
-								"Lorem ipsum dolor sit amet, consectetur
-								adipiscing elit, sed do eiusmod tempor
-								incididunt ut labore et dolore magna aliqua.”
+								"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+								eiusmod tempor incididunt ut labore et dolore magna aliqua.”
 							</Parrafo>
 						</ContenedorDeTexto>
 					</ContenedorIzq>
@@ -37,16 +33,19 @@ export default function PlanesV() {
 						<Productos />
 					</ContenedorDeProductos>
 					<ContenedorDeBotones>
-						<BotonAccion text='Ir a mi Pagar' />
+						<BotonAccion text="Ir a mi Pagar" />
 
 						<BotonAccion
-							onClick={mostrarOcultar}
-							text='Ver detalles'
+							onClick={() => {}}
+							text="Ver detalles"
 						/>
 					</ContenedorDeBotones>
 				</Caja>
 			</Contenedor>
-			{estado ? <Detalles onClick={mostrarOcultar} /> : null}
+			<Detalles
+				onClick={() => {}}
+				price={100}
+			/>
 		</LayoutDentro>
 	);
 }

@@ -10,12 +10,12 @@ import {
 
 export const Carga = () => {
 	return (
-		<Contenedor>
+		<Contenedor active={false}>
 			<ContenedorMensaje>
 				<Caja>
 					<Image
-						src='/images/iconos/loader_outline.png'
-						alt='imagen'
+						src="/images/iconos/loader_outline.png"
+						alt="imagen"
 						width={175}
 						height={175}
 					/>

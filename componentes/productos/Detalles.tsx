@@ -14,6 +14,7 @@ import {
 	FondoBoton,
 	Icon,
 } from './StyledDetalles';
+
 interface Props {
 	onClick: () => void;
 	price: number;
@@ -27,8 +28,8 @@ export const Detalles: FC<Props> = ({ price, onClick }) => {
 						<BotonImagen onClick={onClick}>
 							<Icon>
 								<Image
-									src='/images/iconos/icon_x_black.png'
-									alt='Img'
+									src="/images/iconos/icon_x_black.png"
+									alt="Img"
 									fill
 								/>
 							</Icon>
@@ -50,9 +51,8 @@ export const Detalles: FC<Props> = ({ price, onClick }) => {
 						Beneficios:
 						<li>
 							<br />
-							"Lorem ipsum dolor sit amet, consectetur adipiscing
-							elit, sed do eiusmod tempor incididunt ut labore et
-							dolore magna aliqua.”
+							"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+							eiusmod tempor incididunt ut labore et dolore magna aliqua.”
 							<ul>
 								<li>Lorem ipsum dolor sit amet.</li>
 								<li>Lorem ipsum dolor sit amet.</li>
